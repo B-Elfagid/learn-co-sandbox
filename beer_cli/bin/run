@@ -1,4 +1,4 @@
 #!/usr/bin/env ruby
 require_relative '../lib/beer_cli.rb'
 
-#Cli.new.run
+Cli.new.run

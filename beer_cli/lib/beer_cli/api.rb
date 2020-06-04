@@ -5,9 +5,9 @@ class Api
    res = RestClient.get(BASE_URL)
    data = JSON.parse(res.body)
    data.each do |beers|
-  puts beers["name"]
-  puts beers["image_url"]
+  name = beers["name"]
+  id = beers["id"]
+  Beer.new(name, id)
   end
 end 
-   
 end 

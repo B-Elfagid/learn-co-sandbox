@@ -17,6 +17,7 @@ class Cli
   else
     "Invalid selection, please try again"
   end 
+
   
   case input
   when 'beer'
@@ -31,9 +32,10 @@ else
 end 
 end 
 
+
 def show_beer_types
   puts "Here are the beer types"
-  Beer.beer_types.each do |beer|
+  Beer.beer_types.each do |beers|
 end 
 
 puts "\nSelect a number for the beer you want more information about."
@@ -44,16 +46,19 @@ input = gets.strip.to_i - 1
 end 
 puts "valid input"
 
-def show_more_info
-  puts "More information about beer types"
-end 
 
+beers_object = Beer.beer_types(input)
+show_beer_details(beer_object)
+end
+
+def get_beers_details(beer_object)
+  Api.get_beers_details(beer_object)
+  end 
 
 def goodbye
   puts "Thank you for exploring beer types, Goodbye!"
 end 
-
 end   
-end 
+
 
   

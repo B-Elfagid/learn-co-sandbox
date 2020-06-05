@@ -33,7 +33,6 @@ end
 
 def show_beer_types
   puts "Here are the beer types"
-  binding.pry
   Beer.all
 end 
 

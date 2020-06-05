@@ -17,9 +17,11 @@ class Beer
    @@all
  end 
  
- def self.beer_types
- Beer.all.select {|b| puts "#{b.id}.) #{b.name}"}
+ def self.display_beer_types
+  Beer.all.select {|b| puts "#{b.id}.) #{b.name}"}
  end 
  
 
-end 
+end
+
+

@@ -10,4 +10,9 @@ def self.get_beers
     Beer.new(name, id)
   end 
 end 
+
+def self.get_details_by_id(id)
+ res = RestClient.get("#{BASE_URL}/#{id}")
+ data = JSON.parse(res.body)
+ end 
 end 

@@ -10,6 +10,7 @@ class Cli
     print_all
     print_selection_prompt
    id = valid_id?(prompt_selection)
+   get_beers_details(id)
   end 
   
   def print_all
@@ -41,4 +42,9 @@ class Cli
 end 
 id
 end 
+
+def get_beers_details(id)
+  Api.get_details_by_id(id)
+end 
+  
 end 

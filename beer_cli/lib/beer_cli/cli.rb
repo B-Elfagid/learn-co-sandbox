@@ -1,50 +1,52 @@
 class Cli
   
   def run 
-    print_welcome
+    puts "Welcome to explore about Beer types!"
     Api.get_beers
     main 
   end 
   
   def main
-    print_all
-    print_selection_prompt
-   id = valid_id?(prompt_selection)
-   get_beers_details(id)
+    puts "Would you like to see informations about beer types? if so, type 'beer'."
+    puts "Do you want to see more infomation about beer? if so, type 'moreinfo'."
+    puts "Type 'exit' to exit."
+    input = gets.strip.downcase
+    if input == 'beer'
+    elsif input == 'moreinfo'
+    elsif input == 'exit' || input == 'quit'
+  else
+    "Invalid selection, please try again"
   end 
   
-  def print_all
-    Beer.all.each {|b| puts "#{b.id}.) #{b.name}" }
-  end 
-  
-  def print_selection_prompt
-    puts "Please select Beer by number for more information"
-  end
-  
-   def print_welcome 
-    puts "Welcome to explore about Beer types!"
-  end 
-  
-  def print_error
-    puts "Invalid Selection, please try again"
-  end 
-  
-  def prompt_selection 
-    gets.chomp
-  end 
-  
-  def valid_id?(id)
-   id = id.to_i
-  if id < 1 || id > Beer.all.size
-    print_error
-    sleep 1
-   main 
+  case input
+  when 'beer'
+    show_beer_types
+  when 'moreinfo'
+    show_more_info
+  when 'exit', 'quit'
+    goodbye
+else
+  puts "Invalid selection, please try again"
+  main
 end 
-id
 end 
 
-def get_beers_details(id)
-  Api.get_details_by_id(id)
+def show_beer_types
+  puts "Here are the beer types"
+  binding.pry
+  Beer.all
 end 
+
+def show_more_info
+  puts "More information about beer types"
+end 
+
+
+def goodbye
+  puts "Thank you for exploring beer types, Goodbye!"
+end 
+
+end   
+
+
   
-end 

@@ -17,7 +17,7 @@ class Cli
     show_beer_types
     index = prompt_beer_selection
     beer = get_beer(index)
-    show_beer_details(beer)
+    print_beer_details(beer)
     when 'exit', 'quit'
     goodbye
     else
@@ -45,16 +45,12 @@ class Cli
     Beer.all[index]
   end 
   
-  def show_beer_details(beer)
-    puts "show beer properties here"
-  end
-  
     def print_beer_details(beer)
     puts "name: " + beer.name
     puts "tagline: " + beer.tagline 
     puts "description: " + beer.description
-    puts "abv: " + beer.abv
-    puts "food_pairing: " + beer.food_pairing
+    #puts "abv: " + beer.abv 
+    puts "food_pairing: " + beer.food_pairing.join(" ")
   end 
  
   def goodbye

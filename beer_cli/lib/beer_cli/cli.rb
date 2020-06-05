@@ -33,8 +33,16 @@ end
 
 def show_beer_types
   puts "Here are the beer types"
-  Beer.all
+  Beer.beer_types.each do |beer|
 end 
+
+puts "\nSelect a number for the beer you want more information about."
+input = gets.strip.to_i - 1
+until input >= 0 && input <= Beer.all.size 
+puts "Sorry, please enter a number between 1 and #{Beer.all.size}"
+input = gets.strip.to_i - 1
+end 
+puts "valid input"
 
 def show_more_info
   puts "More information about beer types"
@@ -46,6 +54,6 @@ def goodbye
 end 
 
 end   
-
+end 
 
   

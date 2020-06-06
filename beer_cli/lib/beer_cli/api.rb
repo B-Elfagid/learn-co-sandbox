@@ -1,3 +1,4 @@
+
 class Api 
  
 BASE_URL = "https://api.punkapi.com/v2/beers/"
@@ -10,7 +11,11 @@ def self.get_beers
     tagline = beers["tagline"]
     description = beers["description"]
     abv = beers["abv"]
+
     food_pairing = beers["food_pairing"]
+
+    food_pairing = ["food_pairing"]
+
    Beer.new(name, id, tagline, description, abv, food_pairing)
   end 
 
@@ -30,4 +35,3 @@ end
 
 
 
- 

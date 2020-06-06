@@ -1,7 +1,8 @@
 class Cli
   
   def run 
-    puts "Welcome to explore about Beer types!"
+    puts "************Welcome to explore about Beer types!*************"
+    puts " "
     Api.get_beers
     main 
   end 

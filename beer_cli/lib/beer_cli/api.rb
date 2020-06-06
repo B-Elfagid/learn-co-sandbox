@@ -12,11 +12,16 @@ def self.get_beers
     abv = beers["abv"]
     food_pairing = beers["food_pairing"]
    Beer.new(name, id, tagline, description, abv, food_pairing)
-  
   end 
 
 end 
 
+#def self.get_beer_details(beer_object)
+ #res = RestClient.get("#{BASE_URL}/#{beer_object}")
+ #data = JSON.parse(res.body)
+
+def self.get_beer_details(beer_object)
+end 
 
 end 
 
@@ -24,3 +29,5 @@ end
 
 
 
+
+ 

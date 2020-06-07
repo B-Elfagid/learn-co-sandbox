@@ -14,6 +14,7 @@ class Cli
     puts "Would you like to see informations about beer types? if so, type 'beer'."
 
     puts "Type 'exit' to exit."
+    puts " "
     input = gets.strip.downcase
     
     case input
@@ -60,6 +61,7 @@ class Cli
   
  def goodbye
     puts "Goodbye!"
+    exit
   end 
 
   def second_main

@@ -5,6 +5,8 @@ class Cli
     puts " "
     Api.get_beers
     main 
+    puts " "
+    puts " "
     second_main
   end 
   
@@ -33,7 +35,6 @@ class Cli
     Beer.display_beer_types 
     end
     
-
   def prompt_beer_selection
     puts "\nSelect a number for the beer you want more information about."
     input = gets.strip.to_i - 1
@@ -58,18 +59,21 @@ class Cli
     
   
  def goodbye
-    puts "Thank you for exploring beer types, Goodbye!"
+    puts "Goodbye!"
   end 
 
   def second_main
-  puts "Would you like to go back to beer types? Type 'Y'"
-  puts "Would you like to exit? Type 'E'"
+  puts "********************************************************"  
+  puts "If you would you like to go back to beer types? Type 'Y'"
+  puts "If you would you like to exit? Type 'E'"
+  puts "********************************************************" 
   input = gets.strip.upcase
   if input == "Y" 
+  show_beer_types
   main
   second_main
   elsif input == "E"
-  puts "Goodbye!"
+  puts "Thank you for exploring beer types, Goodbye!"
   else 
   puts "Sorry I couldn't undertand that command"
   second_main

@@ -1,6 +1,7 @@
 
 #appilication environment 
 
+require 'colorize'
 require 'bundler/setup'
 Bundler.require(:default)
 

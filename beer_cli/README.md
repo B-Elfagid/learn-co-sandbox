@@ -22,7 +22,7 @@ Or install it yourself as:
 
 ## Usage
 
-Execute the bin file 'bin/run'. You will be prompted with a choice to explore beer type lists and once you have the beer type lists, you will be prompted with another choice should you wish to explore about details, when you enter your choice, it will list out the beer types and pull up that beer type list containing details about each beer.
+Execute the bin file 'bin/run'. You will be prompted with a choice to explore beer type lists and once you have the beer type lists, you will be prompted with another choice should you wish to explore more details about your beer choice which will pull up more details about your choice of beer type.
 
 ## Development
 

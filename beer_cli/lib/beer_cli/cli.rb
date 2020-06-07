@@ -59,7 +59,7 @@ class Cli
     
   
  def goodbye
-    puts "Goodbye!"
+    puts "Goodbye!".bold.blue
     exit
   end 
 
@@ -74,9 +74,9 @@ class Cli
   main
   second_main
   elsif input == "E"
-  puts "Thank you for exploring beer types, Goodbye!"
+  puts "Thank you for exploring beer types, Goodbye!".bold.blue
   else 
-  puts "Sorry I couldn't undertand that command"
+  puts "Sorry I couldn't undertand that command".bold.red
   second_main
 end
 end 

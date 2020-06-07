@@ -2,7 +2,7 @@
 
 Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/beer_cli`. To experiment with that code, run `bin/console` for an interactive prompt.
 
-TODO: Delete this and the text above, and describe your gem
+Welcome to Beer Gem! I developed this Gem for a Flatiron School project in order to help users explore about few beer lists through a command line interface. This gem allows the user to view a list of name of beers and pull up beer details for each beer names.
 
 ## Installation
 

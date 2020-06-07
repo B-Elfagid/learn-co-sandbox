@@ -50,11 +50,11 @@ class Cli
   end 
   
     def print_beer_details(beer)
-    puts "name: " + beer.name
-    puts "tagline: " + beer.tagline 
-    puts "description: " + beer.description
+    puts "Name: ".bold.blue + beer.name
+    puts "Tagline: ".bold.blue + beer.tagline 
+    puts "Description: ".bold.blue + beer.description
     #puts "abv: " + beer.abv 
-    puts "food_pairing: " + beer.food_pairing.join(" ")
+    puts "Food_pairing: ".bold.blue + beer.food_pairing.join(" ")
     end 
     
   

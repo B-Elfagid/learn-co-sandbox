@@ -65,12 +65,11 @@ class Cli
 
   def second_main
   puts "********************************************************"  
-  puts "If you would you like to go back to beer types? Type 'Y'".bold.blue
+  puts "If you would you like to continue? Type 'Y'".bold.blue
   puts "If you would you like to exit? Type 'E'".bold.blue
   puts "********************************************************" 
   input = gets.strip.upcase
   if input == "Y" 
-  show_beer_types
   main
   second_main
   elsif input == "E"

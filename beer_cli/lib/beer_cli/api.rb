@@ -22,8 +22,8 @@ end
  #res = RestClient.get("#{BASE_URL}/#{beer_object}")
  #data = JSON.parse(res.body)
 
-def self.get_beer_details(beer_object)
-end 
+#def self.get_beer_details(beer_object)
+#end 
 
 end 
 

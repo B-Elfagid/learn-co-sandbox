@@ -4,7 +4,7 @@ class Cli
     puts "************Welcome to explore about Beer types!*************".bold.blue
     puts " "
     Api.get_beers
-    main 
+    main
     puts " "
     puts " "
     second_main
@@ -30,15 +30,20 @@ class Cli
     end 
     end 
 
-  def show_beer_types
+    def show_beer_types
     puts "*****Here are the beer types*****".bold.blue
-    Beer.display_beer_types 
+    Cli.display_beer_types 
     end
+    
+    def self.display_beer_types
+    Beer.all.select {|b| puts "#{b.id}.) #{b.name}"}
+    end 
+ 
     
   def prompt_beer_selection
     puts "\n=>Select a number for the beer you want more information about."
     input = gets.strip.to_i - 1
-    until input >= 0 && input <= Beer.all.size 
+    until input >= 0 && input < Beer.all.size 
       puts "Sorry, please enter a number between 1 and #{Beer.all.size}"
       input = gets.strip.to_i - 1
     end 
@@ -64,6 +69,7 @@ class Cli
   end 
 
   def second_main
+  puts " "
   puts "********************************************************"  
   puts "If you would you like to continue? Type 'Y'".bold.blue
   puts "If you would you like to exit? Type 'E'".bold.blue

@@ -25,7 +25,7 @@ class Beer
   
 def self.select_all_beer_starting_with(letter)
 list_of_beers = self.all.select {|beer| beer.name.start_with?(letter)}
-list_of_beers.each { |beer| puts "#{beer.name}" }
+
 end 
 
 end

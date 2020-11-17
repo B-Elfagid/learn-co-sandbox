@@ -27,12 +27,17 @@ class Cli
       when 'search'
         puts "Which letter would you like to find for beer info: "
         letter = gets.strip.upcase
-        Beer.select_all_beer_starting_with(letter)
+        list_of_beers = Beer.select_all_beer_starting_with(letter)
+        list_of_beers.each { |beer| puts "#{beer.name}" }
+     
         else
         puts "Invalid selection, please try again"
         main
       end 
     end 
+    
+    
+   
 
     def show_beer_types
       puts "*****Here are the beer types*****".bold.blue
@@ -40,7 +45,7 @@ class Cli
     end
     
     def self.display_beer_types
-      Beer.all.select {|b| puts "#{b.id}.) #{b.name}"}
+      Beer.all.each {|b| puts "#{b.id}.) #{b.name}"}
     end 
     
 
